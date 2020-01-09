@@ -503,6 +503,7 @@ input[type="submit"].form-control:focus {
 
 #campanhas .section-content {padding-bottom: 0;}
 #signup-now .section-content {padding-top: 0;}
+.fluid-width-video-wrapper iframe {border-radius: 15px;}
 
 /* ===================================
     Portfolio and Photo Gallery
