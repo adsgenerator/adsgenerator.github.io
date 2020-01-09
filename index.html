@@ -10,14 +10,33 @@
 
     <meta name="author" content="ExplicitConcepts">
     <!-- description -->
-    <meta name="description" content="We are ExplicitConcepts Agency. We have experience in web development allows us to create truly Templates in many categories like PSD Templates, HTML Templates, WordPress Themes, Unbounce Themes and Instapage Theme.">
+    <meta name="description" content="Gerador de campanhas para Google Ads">
     <!-- keywords -->
-    <meta name="keywords" content="unbounce, unbounce landing page, instapage, instapage landing page, landing page, web design, PSD template, responsive web design, website designed, free web design, flat web design, site template, web de, website, web development">
+    <meta name="keywords" content="google ads, adsgenerator, gerador de campanha, campanha google ads, anuncio google ads">
 
 	<!-- Stylesheets
 	============================================= -->
 	<link href="css/css-assets.css" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet">
+	 <!-- animation -->
+        <link rel="stylesheet" href="css/animate.css" />
+        <!-- bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- font-awesome icon -->
+        <link rel="stylesheet" href="css/font-awesome.min.css" />
+        <!-- themify-icons -->
+        <link rel="stylesheet" href="css/themify-icons.css" />
+        <!-- owl carousel -->
+        <link rel="stylesheet" href="css/owl.transitions.css" />
+        <link rel="stylesheet" href="css/owl.carousel.css" /> 
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="css/magnific-popup.css" /> 
+        <!-- base -->
+        <link rel="stylesheet" href="css/base.css" /> 
+        <!-- elements -->
+        <link rel="stylesheet" href="css/elements.css" />
+        <!-- responsive -->
+        <link rel="stylesheet" href="css/responsive.css" />
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,600,600i,700,700i" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700i,700" rel="stylesheet">
 
@@ -31,7 +50,7 @@
 	<!-- Title
 	============================================= -->
 	<title>AdGenerator</title>
-
+	
 </head>
 
 <body>
@@ -470,7 +489,83 @@
 					</div><!-- .section-content end -->
 		
 				</div><!-- .parallax-section end -->
+		        
+				
+				<div id="campanhas" class="flat-section">
 		
+					<div class="section-content">
+		
+						<div class="container">
+							<div class="row">
+								
+		
+								<div class="col-md-12">
+		
+									<div class="row">
+										<div class="col-md-8 col-md-offset-2">
+		
+									<div class="section-title text-center">
+										<!--<span>Start Your Free Trial</span>-->
+										<h2>Resultados Alcançados</h2>
+										
+									</div><!-- .section-title end -->
+		
+								</div><!-- .col-md-8 end -->
+								   <div class="container">
+    <div class="row">
+        <div class="work-3col wide gutter">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="overflow-hidden grid-gallery">
+                    <div class="tab-content">
+                        <ul class="masonry-items grid">
+                            <!-- portfolio item -->
+                            <li>
+                                <figure>
+                                    <div class="gallery-img lightbox-gallery">
+                                        <a href="images/campanhas/google-1.jpg" title=""><img src="images/campanhas/google-1.jpg" id="tz-bg-124" data-img-size="(W)800px X (H)650px" alt=""></a>
+                                    </div>
+                                </figure>                                  
+                            </li>
+                            <!-- end portfolio item -->
+                            <!-- portfolio item -->
+                            <li>
+                                <figure>
+                                    <div class="gallery-img lightbox-gallery">
+                                        <a href="images/campanhas/google-2.jpg" title=""><img src="images/campanhas/google-2.jpg" id="tz-bg-125" data-img-size="(W)800px X (H)650px" alt=""></a>
+                                    </div>
+                                </figure>                                  
+                            </li>
+                            <!-- end portfolio item -->
+                            <!-- portfolio item -->
+                            <li>
+                                <figure>
+                                    <div class="gallery-img lightbox-gallery">
+                                        <a href="images/campanhas/google-1.jpg" title=""><img src="images/campanhas/google-1.jpg" id="tz-bg-126" data-img-size="(W)800px X (H)650px" alt=""></a>
+                                    </div>
+                                </figure>                                  
+                            </li>
+                            <!-- end portfolio item -->
+                            <!-- portfolio item -->
+                            <!-- end portfolio item -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+									</div><!-- .row end -->
+		
+								</div><!-- .col-md-6 end -->
+								<hr class="divider-line space-100">
+							 
+							</div><!-- .row end -->
+						</div><!-- .container end -->
+		
+					</div><!-- .section-content end -->
+		
+				</div>
+				
 				<!-- === Signup Now =========== -->
 				<div id="signup-now" class="flat-section">
 		
@@ -639,10 +734,33 @@
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.mb.YTPlayer.min.js"></script>
 	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script type="text/javascript">
+    $('.lightbox-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Carregando imagem #%curr%...',
+        mainClass: 'mfp-fade',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function (item) {
+                return item.el.attr('title');
+            }
+        }
+    });
+</script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
 	<script src="js/simple-scrollbar.min.js"></script>
 	<script src='js/functions.js'></script>
-
+	<script src="js/wow.min.js"></script>
+	<script src="js/equalize.min.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script> 
+	
 </body>
 </html>
