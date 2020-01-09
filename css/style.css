@@ -502,6 +502,8 @@ input[type="submit"].form-control:focus {
     color: #eee; }
 
 #campanhas .section-content {padding-bottom: 0;}
+#signup-now .section-content {padding-top: 0;}
+
 /* ===================================
     Portfolio and Photo Gallery
 ====================================== */
