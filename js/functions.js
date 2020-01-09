@@ -218,16 +218,23 @@ function lightboxImage() {
 
 // *** Lightbox Gallery *** //
 function lightboxGallery() {
-	$(".lightbox-gallery").magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		},
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
-		fixedContentPos: false
-	});
+    $('.lightbox-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Carregando imagem #%curr%...',
+        mainClass: 'mfp-fade',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function (item) {
+                return item.el.attr('title');
+            }
+        }
+    });
 }
 
 
