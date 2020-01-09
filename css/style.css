@@ -504,7 +504,9 @@ input[type="submit"].form-control:focus {
 #campanhas .section-content {padding-bottom: 0;}
 #signup-now .section-content {padding-top: 0;}
 .fluid-width-video-wrapper iframe {border-radius: 15px;}
-
+@media (min-width: 1120px) {
+img.mfp-img {max-height: 500px !important;}
+}
 /* ===================================
     Portfolio and Photo Gallery
 ====================================== */
