@@ -629,7 +629,7 @@
                                                     <input type="text" name="cs2Email" id="cs2Email" class="form-control">
                                                 </div><!-- .form-group end -->
                                                 <div class="form-group">
-                                                    <input type="submit" class="form-control" value="FINALIZAR CADASTRO">
+                                                    <input id="botaoSubmit" type="submit" class="form-control" value="FINALIZAR CADASTRO">
                                                 </div><!-- .form-group end -->
                                             </form><!-- #form-cta-subscribe-2 end -->
                                         </div><!-- .box-content end -->
@@ -709,5 +709,14 @@
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/simple-scrollbar.min.js"></script>
     <script src='js/functions.js'></script>
+	<script>
+	$('#botaoSubmit').click(function() {
+    var nome = $('#cs2Name').val();
+    var email = $('#cs2Email').val();
+
+    window.location.href = "https://app.adsgenerator.com.br/Account/Signup?name=" + nome + "&email=" + email;
+
+    });
+	</script>
 </body>
 </html>
