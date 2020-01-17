@@ -1383,7 +1383,7 @@ figure:hover img { cursor: url("../images/icon/icon-zoom-white.png"), pointer; o
   .testimonial-single-1 .ts-person {
     overflow: hidden;
     position: relative;
-    margin-top: -40px;
+    margin-top: -10px;
     padding: 0 30px 45px; }
     .testimonial-single-1 .ts-person h5 {
       display: block;
