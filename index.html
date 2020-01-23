@@ -744,13 +744,11 @@
     <script src='js/functions.js'></script>
 	<script>
 	$('#botaoSubmit').click(function() {
-    var nome = $('#cs2Name').val();
-    var email = $('#cs2Email').val();
-
-    //window.location.href = "https://app.adsgenerator.com.br/Account/Signup?nome=" + nome + "&email=" + email;
-    window.location.href = "https://dev-adsgenerator.azurewebsites.net/Account/Signup?nome=" + nome + "&email=" + email;
-    
-
+        var nome = $('#cs2Name').val();
+        var email = $('#cs2Email').val();
+        var url = "?nome=" + nome + "&email=" + email;
+        //window.location.href = "https://app.adsgenerator.com.br/Account/Signup?nome=" + nome + "&email=" + email;
+        window.location.href = "https://dev-adsgenerator.azurewebsites.net/Account/Signup?info=" + btoa(url);
     });
 	</script>
 </body>
