@@ -1575,7 +1575,25 @@ figure:hover img { cursor: url("../images/icon/icon-zoom-white.png"), pointer; o
 .header-bar .hb-content {
   display: flex;
   align-items: center;
-  height: 100%; }
+  height: 100%;
+  justify-content: space-between;  }
+ 
+.header-bar .btn-login {
+    float: right; }
+
+.header-bar .btn-login a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    padding: 8px 25px;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 5px;
+    color: white; }
+
+.header-bar .btn-login a i {
+    margin-right: 10px; }
 
 /* Header Bar Sticky */
 .header-bar.is-sticky .header-bar-wrap {
