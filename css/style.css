@@ -1595,6 +1595,13 @@ figure:hover img { cursor: url("../images/icon/icon-zoom-white.png"), pointer; o
 .header-bar .btn-login a i {
     margin-right: 10px; }
 
+@media (max-width: 768px) {
+.header-bar .btn-login {
+    margin-left: 15%; }
+a.btn.cta-topo {
+    padding: 15px 35px; }	
+}
+
 /* Header Bar Sticky */
 .header-bar.is-sticky .header-bar-wrap {
   position: fixed;
