@@ -516,7 +516,7 @@ function formCTASubscribe2() {
 	});
 
 	var errorMsgData = csNotifications.data("error-msg"),
-		errorMsgDefault = 'Please Follow Error Messages and Complete as Required',
+		errorMsgDefault = 'Preencha os campos obrigatórios',
 		errorMsg = (errorMsgData) ? (errorMsgData) : errorMsgDefault;
 
 	// Submit event
@@ -554,7 +554,7 @@ function cs2SubmitForm() {
 	});
 }
 
-function cs2Success() { var i = csNotifications.data("success-msg"), s = i || "Thank you for your submission :)"; $("#form-cta-subscribe-2")[0].reset(), cs2SubmitMSG(!0, '<i class="cs-success-icon fas fa-check"></i>' + s), $(".cs-notifications-content").addClass("sent"), csNotifications.css("opacity", 0), csNotifications.slideDown(300).animate({ opacity: 1 }, 300).delay(5e3).slideUp(400), $("#form-cta-subscribe-2").hasClass("redirected") && setTimeout(function () { window.location.href = "thank-you-page.html" }, 3e3) } function cs2Error() { csNotifications.css("opacity", 0), csNotifications.slideDown(300).animate({ opacity: 1 }, 300), $(".cs-notifications-content").removeClass("sent") } function cs2SubmitMSG(i, s) { var n; n = "shake animated", csNotifications.delay(300).addClass(n).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () { $(this).removeClass("shake bounce animated") }), csNotifications.children(".cs-notifications-content").html(s) }
+function cs2Success() { var i = csNotifications.data("success-msg"), s = i || "Obrigado pelo seu registro :)"; $("#form-cta-subscribe-2")[0].reset(), cs2SubmitMSG(!0, '<i class="cs-success-icon fas fa-check"></i>' + s), $(".cs-notifications-content").addClass("sent"), csNotifications.css("opacity", 0), csNotifications.slideDown(300).animate({ opacity: 1 }, 300).delay(5e3).slideUp(400), $("#form-cta-subscribe-2").hasClass("redirected") && setTimeout(function () { window.location.href = "thank-you-page.html" }, 3e3) } function cs2Error() { csNotifications.css("opacity", 0), csNotifications.slideDown(300).animate({ opacity: 1 }, 300), $(".cs-notifications-content").removeClass("sent") } function cs2SubmitMSG(i, s) { var n; n = "shake animated", csNotifications.delay(300).addClass(n).one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () { $(this).removeClass("shake bounce animated") }), csNotifications.children(".cs-notifications-content").html(s) }
 
 
 function convertHex(hex, opacity) {
