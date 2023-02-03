@@ -16,9 +16,9 @@
     <meta name="google-site-verification" content="U4hxdH-hWYaHoth_zdOuSJ9V_NK6p-DwYJ2R5cBblO0" />
     
     <!-- OPEN GRAPH TAGS -->
-    <meta property="og:title" content="Gerador de Campanhas SKAG Google Ads | AdsGenerator">
+    <meta property="og:title" content="Gerador de Campanhas SKAG, STAG e SIAG Google Ads | AdsGenerator">
     <meta property="og:site_name" content="AdsGenerator">
-	<meta property="og:description" content="Aprenda a criar campanhas no Google Ads utilizando a metodologia SKAG (Single Keyword Ad Group), através na nossa plataforma AdsGenerator. Eleve os níveis de CTR às alturas e consiga mais conversões pagando menos!">
+	<meta property="og:description" content="Aprenda a criar campanhas no Google Ads utilizando as metodologias SKAG, STAG e SIAG, através na nossa plataforma AdsGenerator. Eleve os níveis de CTR às alturas e consiga mais conversões pagando menos!">
 	<meta property="og:image" content="images/adsgenerator-social.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="800"> 
@@ -61,22 +61,29 @@
 
     <!-- Title
     ============================================= -->
-    <title>Gerador de Campanhas SKAG Google Ads - AdsGenerator</title>
+    <title>Gerador de Campanhas SKAG, STAG e SIAG Google Ads - AdsGenerator</title>
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-THK3H9F');</script>
-    <!-- End Google Tag Manager -->
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=3xjTxynMx6W8kmWQil4I1w&gtm_preview=env-1&gtm_cookies_win=x'; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-THK3H9F');
+        </script>
+        <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THK3H9F"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THK3H9F&gtm_auth=3xjTxynMx6W8kmWQil4I1w&gtm_preview=env-1&gtm_cookies_win=x"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <div id="scroll-progress"><div class="scroll-progress"><span class="scroll-percent"></span></div></div>
@@ -469,9 +476,24 @@
                                                             Trabalho há um tempo com a plataforma e ela realmente supre as necessidades que tinha de campanhas do Google. Com ela eu consegui expandir meu anúncios aumentando a chance de alcance real de atingir um público qualificado.
                                                         </div>
                                                         <div class="ts-person">
-                                                            <h5>Francyelle Ferreira</h5>
+                                                            <h5>Arthur Marques</h5>
                                                             <h6>Analista de Marketing Digital</h6>
-                                                            <span>Auto Truck</span>
+                                                            <span>Agência Marques</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="slide">
+													<div class="testimonial-single-1">
+                                                        <div class="ts-content">
+                                                            <!--<i class="flaticon-alarm-1"></i>-->
+                                                            O AdsGenerator facilita bastante o processo de criação de campanhas dos meus clientes
+                                                        </div>
+                                                        <div class="ts-person">
+                                                            <h5>Tulio Pocciotti</h5>
+                                                            <h6>Dono de agência de marketing</h6>
+                                                            <span>Growth Analytics</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -752,8 +774,14 @@
         // redirect to where you want
         } else {
         //window.location.href = "https://app.adsgenerator.com.br/Account/Signup?nome=" + nome + "&email=" + email;
-        window.location.href = "https://dev-adsgenerator.azurewebsites.net/Account/Signup?info=" + btoa(url);
-		}
+            dataLayer.push({
+                'event': 'pre-sign-up'
+            });
+            if(window.location.hostname.indexOf("localhost") != -1)
+                window.location.href = "http://localhost:60887/Account/Login?info=" + btoa(url);
+            else
+                window.location.href = "https://dev-adsgenerator.azurewebsites.net/Account/Signup?info=" + btoa(url);
+        }
     });
 	</script>
 </body>
