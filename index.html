@@ -65,14 +65,30 @@
     <meta name="facebook-domain-verification" content="j7motr9w4lrixnzlyugaw6dvpwgvvq" />
     <!-- Google Tag Manager -->
     <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=3xjTxynMx6W8kmWQil4I1w&gtm_preview=env-1&gtm_cookies_win=x'; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-THK3H9F');
+        if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "")
+        {
+            //Conta Dev
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=UIw1s6PDmUsm3l2LKS1_jg&gtm_preview=env-25&gtm_cookies_win=x'; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-THK3H9F');
+        }
+        else
+        {
+            //Conta Prod
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl + '&gtm_auth=3xjTxynMx6W8kmWQil4I1w&gtm_preview=env-1&gtm_cookies_win=x'; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-THK3H9F');
+        }
     </script>
     <!-- End Google Tag Manager -->
 
@@ -80,7 +96,8 @@
 
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript>
+    <noscript>        
+        <!-- Conta Prod -->
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THK3H9F&gtm_auth=3xjTxynMx6W8kmWQil4I1w&gtm_preview=env-1&gtm_cookies_win=x"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
@@ -775,12 +792,12 @@
         // redirect to where you want
         } else {
             dataLayer.push({
-                'event': 'pre-sign-up',
+                'event': 'pre_sign_up',
                 'email': email.toLowerCase()
             });
 
-            if(window.location.hostname.indexOf("localhost") != -1)
-                window.location.href = "http://localhost:60887/Account/Login?info=" + btoa(url);
+            if (location.hostname === "localhost" || location.hostname === "127.0.0.1" || location.hostname === "")
+                window.location.href = "http://localhost:60887/Account/Signup?info=" + btoa(url);
             else
                 window.location.href = "https://dev-adsgenerator.azurewebsites.net/Account/Signup?info=" + btoa(url);
         }
